@@ -1,0 +1,16 @@
+README.md
+  h_cce3e387871359 241
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "5c6aacded3876aa27c1a9698867c2ef79c3623ff",
+  "prompts": {},
+  "humans": {
+    "h_cce3e387871359": {
+      "author": "fuxinzhao <fuxinzhao@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
