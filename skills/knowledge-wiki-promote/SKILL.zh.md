@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/promote.md`。
+2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/promote.md`。
 3. 先解析用户提供的 QA 输入，再逐一读取被选中的 `output/qa/*.md`；若输入是 `current` / `last`，则先根据当前会话上下文回捞出一份 QA 文件。
 
 ## 入参解析

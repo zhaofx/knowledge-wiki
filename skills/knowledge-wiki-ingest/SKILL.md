@@ -16,8 +16,8 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. For URL/document ingestion, read `aide-commands/ingest-url.md`.
-3. For image ingestion, read `aide-commands/ingest-image.md`.
+2. For URL/document ingestion, read `commands/ingest-url.md`.
+3. For image ingestion, read `commands/ingest-image.md`.
 
 ## Raw landing rules
 

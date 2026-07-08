@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/digest.md`.
+2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/digest.md`.
 
 ## Inputs
 

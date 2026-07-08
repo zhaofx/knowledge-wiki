@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/process-inbox.md`.
+2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/process-inbox.md`.
 3. Inspect `${KNOWLEDGE_ROOT_DIR}/knowledge/raw/inbox/` excluding `_archived/`.
 
 ## Workflow

@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/process-inbox.md`。
+2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/process-inbox.md`。
 3. 检查 `${KNOWLEDGE_ROOT_DIR}/knowledge/raw/inbox/`（排除 `_archived/`）。
 
 ## 工作流

@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/digest.md`。
+2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/digest.md`。
 
 ## 入参
 

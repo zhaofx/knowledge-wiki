@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/merge-pending.md`.
+2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/merge-pending.md`.
 3. List `output/pending/*.md` with `status: pending`.
 
 ## Workflow

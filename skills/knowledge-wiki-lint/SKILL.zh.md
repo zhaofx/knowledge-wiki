@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/lint-wiki.md`。
+2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/lint-wiki.md`。
 
 ## 工作流
 

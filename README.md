@@ -4,7 +4,7 @@
 
 本仓库是一个**面向数据仓库领域特化的 LLM Wiki**，落地 Andrej Karpathy 提出的 **LLM Wiki** 知识管理范式：人类只投喂原始材料，LLM 负责编译、维护、查询、综述整个知识库。
 
-> **本仓库是纯骨架** —— 只带目录、[AIDE.md](file:///Users/bytedance/git/knowledge-wiki/knowledge/AIDE.md)、[aide-commands/](file:///Users/bytedance/git/knowledge-wiki/knowledge/aide-commands)、[skills/](file:///Users/bytedance/git/knowledge-wiki/skills)，**不携带任何示例的 wiki 页面或 raw 素材**。`knowledge/wiki/**`、`knowledge/raw/**`、`knowledge/output/**` 下的实际内容都被 `.gitignore` 忽略；用户本地 ingest 出的知识仅存在于本机，不会误提交回骨架仓库。
+> **本仓库是纯骨架** —— 只带目录、[AIDE.md](file:///Users/bytedance/git/knowledge-wiki/knowledge/AIDE.md)、[commands/](file:///Users/bytedance/git/knowledge-wiki/knowledge/commands)、[skills/](file:///Users/bytedance/git/knowledge-wiki/skills)，**不携带任何示例的 wiki 页面或 raw 素材**。`knowledge/wiki/**`、`knowledge/raw/**`、`knowledge/output/**` 下的实际内容都被 `.gitignore` 忽略；用户本地 ingest 出的知识仅存在于本机，不会误提交回骨架仓库。
 
 > "Obsidian 是 IDE，LLM 是程序员，wiki 是代码库，`raw/` 是源代码。"
 
@@ -13,8 +13,8 @@
 一个仓库、两层执行界面、一份编译配置：
 
 1. **编译配置** —— [knowledge/AIDE.md](file:///Users/bytedance/git/knowledge-wiki/knowledge/AIDE.md)：把任意长上下文 LLM 变成**有纪律的数仓知识库维护者**。定义了目录规范、页面模板、摄取协议、`traceability: strong|weak` 溯源约束、远端知识入库确认规则等硬性规则。
-2. **底层命令模板** —— [knowledge/aide-commands/](file:///Users/bytedance/git/knowledge-wiki/knowledge/aide-commands)：8 份可复用的执行手册（`ask.md` / `ingest-url.md` / `ingest-image.md` / `process-inbox.md` / `lint-wiki.md` / `promote.md` / `merge-pending.md` / `digest.md`）。所有 Skill 都会先读 AIDE.md，再按对应模板执行；不加载 Skill 的宿主（如原生 Aide）也能直接引用这些模板。
-3. **上层 Skill 封装** —— [skills/](file:///Users/bytedance/git/knowledge-wiki/skills)：7 个 Skill，是 `aide-commands/` 的 Skill 化包装，覆盖「摄取 → 查询 → 晋升 → 综述」的完整闭环。任何加载 Skill 的 Agent 宿主（Trae / Claude Code / Cursor / Mira 等）都能以自然语言触发同一套工作流：
+2. **底层命令模板** —— [knowledge/commands/](file:///Users/bytedance/git/knowledge-wiki/knowledge/commands)：8 份可复用的执行手册（`ask.md` / `ingest-url.md` / `ingest-image.md` / `process-inbox.md` / `lint-wiki.md` / `promote.md` / `merge-pending.md` / `digest.md`）。所有 Skill 都会先读 AIDE.md，再按对应模板执行；不加载 Skill 的宿主（如原生 Aide）也能直接引用这些模板。
+3. **上层 Skill 封装** —— [skills/](file:///Users/bytedance/git/knowledge-wiki/skills)：7 个 Skill，是 `commands/` 的 Skill 化包装，覆盖「摄取 → 查询 → 晋升 → 综述」的完整闭环。任何加载 Skill 的 Agent 宿主（Trae / Claude Code / Cursor / Mira 等）都能以自然语言触发同一套工作流：
 
    | 阶段 | Skill | 用户可能说的话 | 对应命令模板 |
    |---|---|---|---|
@@ -53,7 +53,7 @@ knowledge-wiki/
 ├── .trae/skills/                   # Trae 运行时缓存（bootstrap.sh 自动同步；不入 git）
 └── knowledge/                      # 实际工作目录（.keep 骨架入 git；.md 内容不入 git）
     ├── AIDE.md                     # LLM 维护者的硬规则（数仓特化版）
-    ├── aide-commands/              # 命令模板（Skill 与原生 Aide 共用的执行手册）
+    ├── commands/                   # 命令模板（Skill 与原生 Aide 共用的执行手册）
     │   ├── ask.md
     │   ├── ingest-url.md
     │   ├── ingest-image.md
@@ -162,16 +162,16 @@ knowledge-wiki/
 
 ### 不加载 Skill 的宿主（例如原生 Aide）
 
-命令模板 `knowledge/aide-commands/*.md` 可以直接被引用。用一句话把 AIDE.md + 对应模板告诉宿主即可：
+命令模板 `knowledge/commands/*.md` 可以直接被引用。用一句话把 AIDE.md + 对应模板告诉宿主即可：
 
 ```text
-请在 ${KNOWLEDGE_ROOT_DIR}/knowledge 下，读取 AIDE.md，并按 aide-commands/ask.md 执行：这个指标应该选哪张表？
+请在 ${KNOWLEDGE_ROOT_DIR}/knowledge 下，读取 AIDE.md，并按 commands/ask.md 执行：这个指标应该选哪张表？
 ```
 
 或：
 
 ```text
-请在 ${KNOWLEDGE_ROOT_DIR}/knowledge 下，按 aide-commands/process-inbox.md 处理 inbox。
+请在 ${KNOWLEDGE_ROOT_DIR}/knowledge 下，按 commands/process-inbox.md 处理 inbox。
 ```
 
 ---
@@ -232,7 +232,7 @@ wiki 只是系统的一半，另一半是**使用 wiki** 时会发生什么：
 - `raw/tables/`、`raw/sql/`、`raw/lineage/` 体量可能很大，默认按索引或 `db.table` 精确读取，禁止全文灌入。
 - 所有事实陈述都要引用来源（本地 `raw/` 路径或外部 URL）。
 - 有争议 / 不确定的信息要显式标注。
-- `knowledge-wiki-merge`（对应 `aide-commands/merge-pending.md`）是内容进入正式 `wiki/` 的最终人工闸门；不接受批量合并。
+- `knowledge-wiki-merge`（对应 `commands/merge-pending.md`）是内容进入正式 `wiki/` 的最终人工闸门；不接受批量合并。
 
 ---
 

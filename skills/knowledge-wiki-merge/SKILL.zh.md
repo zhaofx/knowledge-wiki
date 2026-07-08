@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/merge-pending.md`。
+2. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/merge-pending.md`。
 3. 列出 `output/pending/*.md` 中 `status: pending` 的候选。
 
 ## 工作流

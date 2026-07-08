@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/promote.md`.
+2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/promote.md`.
 3. Resolve the requested QA inputs, then read each selected `output/qa/*.md` file; for `current`/`last`, use the current conversation context to create a recovery QA file first.
 
 ## Input resolution

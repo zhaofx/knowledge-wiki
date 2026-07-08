@@ -16,8 +16,8 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## 必读文件
 
 1. 读取 `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`。
-2. 对 URL / 文档类摄取，读取 `aide-commands/ingest-url.md`。
-3. 对图片类摄取，读取 `aide-commands/ingest-image.md`。
+2. 对 URL / 文档类摄取，读取 `commands/ingest-url.md`。
+3. 对图片类摄取，读取 `commands/ingest-image.md`。
 
 ## Raw 落点规则
 

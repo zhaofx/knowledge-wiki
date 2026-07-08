@@ -16,7 +16,7 @@ ${KNOWLEDGE_ROOT_DIR}/knowledge
 ## Required reads
 
 1. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/AIDE.md`.
-2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/aide-commands/lint-wiki.md`.
+2. Read `${KNOWLEDGE_ROOT_DIR}/knowledge/commands/lint-wiki.md`.
 
 ## Workflow
 
