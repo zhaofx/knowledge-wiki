@@ -238,4 +238,4 @@ wiki 只是系统的一半，另一半是**使用 wiki** 时会发生什么：
 
 ## 致谢
 
-灵感来自 [Andrej Karpathy 的 `llm-wiki.md` Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 以及他在 X 上发表的 [LLM Knowledge Bases 帖子](https://x.com/karpathy/status/2039805659525644595)。raw 层的 L0 / L1 / L2 分层与 raw / wiki 物理切分参考了字节内部飞书文档 [《语义开发 Skill 探索及轻量化 Wiki 生成实践》](https://bytedance.larkoffice.com/wiki/XDpgwgmOOiFVtAkKuNvcbxUmnwf)。
+灵感来自 [Andrej Karpathy 的 `llm-wiki.md` Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 以及他在 X 上发表的 [LLM Knowledge Bases 帖子](https://x.com/karpathy/status/2039805659525644595)。
